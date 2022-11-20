@@ -14,6 +14,7 @@ while True:
         number -= 1
       
     cnt += 1  
+    
     if number == 1:
         break
     
