@@ -3,8 +3,6 @@ from itertools import product
 
 N = int(input())
 
-case = []
-
 for _ in range(N):
     wear = {}
     M = int(input())
@@ -15,4 +13,4 @@ for _ in range(N):
         else:
             wear[cloth_type] = [cloth]
     wears = tuple(wear.values())
-    print(len(list(product(*wears))))
+    print(list(product(*wears)))
