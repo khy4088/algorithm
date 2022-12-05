@@ -1,5 +1,4 @@
 import sys
-from itertools import product
 
 N = int(input())
 
@@ -11,6 +10,8 @@ for _ in range(N):
         if cloth_type in wear:
             wear[cloth_type].append(cloth)
         else:
-            wear[cloth_type] = [cloth]
-    wears = tuple(wear.values())
-    print(list(product(*wears)))
+            wear[cloth_type] = ['', cloth]
+    t = 1
+    for i in wear:
+        t *= len(wear[i])
+    print(t - 1)
