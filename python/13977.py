@@ -10,17 +10,17 @@ def devide_pow(C, n):
         n //= 2
     return result % 1000000007
 
-def get_fact(n):
-    result = 1
-    for i in range(1, n+1):
-        result *= i
-        result %= 1000000007
-    return result
+
+fact = [1] * 4000001
+fact[1] = 1
+
+for i in range(2, 4000001):
+    fact[i] = i * fact[i-1] % 1000000007
 
 M = int(input())
 
 for _ in range(M):
     N, K = map(int, sys.stdin.readline().rstrip().split())
 
-    print(get_fact(N) * devide_pow(get_fact(K) * get_fact(N-K), 1000000005) % 1000000007)
+    print(fact[N] * devide_pow(fact[K] * fact[N-K], 1000000005) % 1000000007)
     
