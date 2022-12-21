@@ -19,6 +19,6 @@ for _ in range(int(input())):
     elif command[0] == 'P':
         string_L.append(command[1])
     
-    print('output : ', ''.join(string_L)+''.join(string_R))
+    # print('output : ', ''.join(string_L)+''.join(string_R))
     
 print(''.join(string_L)+''.join(string_R))
